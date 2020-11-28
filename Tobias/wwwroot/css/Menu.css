@@ -1,5 +1,4 @@
-﻿@charset "UTF-8";
-@font-face {
+﻿@font-face {
   font-family: Italianno;
   src: url("/Fonts/Italianno-Regular.ttf"); }
 
@@ -37,7 +36,7 @@
 
 .name {
   font-family: 'Italianno';
-  font-size: 2.2rem;
+  font-size: 2.15rem;
   margin-left: 5vw;
   white-space: nowrap;
   font-weight: 500; }
@@ -50,7 +49,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       color: black;
       cursor: pointer;
       white-space: nowrap; }
@@ -96,11 +95,19 @@
       white-space: nowrap;
       padding-top: 0px;
       margin: 0px;
-      font-size: 1.25rem; }
+      font-size: 1.2rem; }
       .drop-menu > ul li:hover {
         background: white; }
       .drop-menu > ul li:last-child {
         border-radius: 0px 0px 5px 5px; }
+  .drop-menu > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  .drop-menu > a > i {
+    margin-left: 8px;
+    margin-top: 2px;
+    font-weight: 700; }
   .drop-menu:hover > ul {
     perspective: 1000px; }
     .drop-menu:hover > ul li {
@@ -132,11 +139,6 @@
         animation-delay: 1500ms; }
       .drop-menu:hover > ul li:nth-child(10) {
         animation-delay: 1700ms; }
-  .drop-menu > a:after {
-    content: '⮟';
-    padding-left: 8px;
-    padding-top: 1px;
-    font-size: 1.15rem; }
 
 @keyframes drop-down-animation {
   0% {

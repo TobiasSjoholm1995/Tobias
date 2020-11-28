@@ -4,7 +4,7 @@ $menu-color: white;
 $menu-item-color: white;
 $menu-border-radius: 5px;
 $menu-font-color: black;
-$menu-font-size: 1.3rem;
+$menu-font-size: 1.25rem;
 
 @font-face {
     font-family: Italianno;
@@ -147,6 +147,18 @@ $menu-font-size: 1.3rem;
         }
     }
 
+    & > a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    & > a > i {
+        margin-left: 8px;
+        margin-top: 2px;
+        font-weight: 700;
+    }
+
     &:hover > ul {
         perspective: 1000px;
 
@@ -167,13 +179,6 @@ $menu-font-size: 1.3rem;
                 }
             }
         }
-    }
-
-    & > a:after {
-        content: '⮟';
-        padding-left: 8px;
-        padding-top: 1px;
-        font-size: $menu-font-size - 0.15rem;
     }
 }
 
