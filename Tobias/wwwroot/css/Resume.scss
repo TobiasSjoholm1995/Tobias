@@ -1,0 +1,114 @@
+﻿@import 'Variables.scss';
+
+$image-max-size: calc(65px + 7rem);
+$image-large:       calc(#{$image-max-size} * 0.8);
+$image-normal:   calc(#{$image-max-size} * 0.6);
+$image-small:    calc(#{$image-max-size} * 0.4);
+
+.resume-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    min-width: $min-screen-width - 40px;
+}
+
+.work-list {
+    display: inline-block;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+.work-item {
+    background: rgba(#fbd8b9, 1);
+    padding: 11px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    a {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: $small-screen) {
+    .resume-div {
+        max-width: 92vw;
+    }
+}
+
+@media (min-width: $small-screen) and (max-width: $medium-screen) {
+    .resume-div {
+        max-width: 80vw;
+    }
+}
+
+
+@media (min-width: $medium-screen) and (max-width: $large-screen) {
+    .resume-div {
+        max-width: 60vw;
+    }
+}
+
+@media (min-width: $large-screen) {
+    .resume-div {
+        max-width: 45vw;
+    }
+}
+
+.work-image-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    min-width: $image-max-size;
+    max-width: $image-max-size;
+    width: $image-max-size;
+    padding-right: 20px;
+}
+
+.work-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: black;
+}
+
+.work-image {
+    padding: 5px;
+    max-width: $image-max-size;
+    width: $image-max-size;
+}
+
+.image-large {
+    max-width: $image-large;
+    width: $image-large;
+}
+
+.image-normal {
+    max-width: $image-normal;
+    width: $image-normal;
+}
+
+.work-image.image-small {
+    max-width: $image-small;
+    width: $image-small;
+}
+
+.work-image.realfast {
+    border-radius: 50%;
+}
+
+.work-image.kbab {
+    border-radius: 15%;
+}

@@ -1,0 +1,82 @@
+﻿@page "/Resume/{SubPage}"
+@page "/Resume"
+
+
+<div class="resume-div">
+
+    @if (GetConentType() == ResumeType.Education)
+    {
+        <h2 class="title">Education</h2>
+        <h5>A list of my educations in reversed chronological order.</h5>
+    }
+    else @if (GetConentType() == ResumeType.Projects)
+    {
+        <h2 class="title">Projects</h2>
+        <h5>A list of my code projects that I worked with in my freetime.</h5>
+    }
+    else
+    {
+        <h2 class="title">Work Experiences</h2>
+        <h5>A list of my work experiences in reversed chronological order.</h5>
+    }
+
+    <hr>
+
+    <ul class="work-list">
+
+        @foreach (var data in GetData())
+        {
+            <li class="work-item">
+                <div class="work-image-div">
+                    <img class="work-image @data.CssClass" src="Images/Logos/@data.Filename" />
+                </div>
+                <div class="work-text">
+                    <h5>@data.Title  @data.Date</h5>
+                    <h6>@data.Text</h6>
+
+                    @if(data.Link != null)
+                    {
+                        <a href="@data.Link.Ulr" target="@data.Link.Target">@data.Link.Text</a>
+                    }
+                </div>
+            </li>
+        }
+
+    </ul>
+</div>
+
+@code {
+
+    [Parameter]
+    public string SubPage { get; set; }
+
+    public enum ResumeType { Work, Education, Projects }
+
+    private ResumeType GetConentType()
+    {
+        if (string.IsNullOrEmpty(SubPage))
+            return ResumeType.Work;
+
+        if (string.Equals(SubPage, "Education", StringComparison.InvariantCultureIgnoreCase))
+            return ResumeType.Education;
+
+        if (string.Equals(SubPage, "Projects", StringComparison.InvariantCultureIgnoreCase))
+            return ResumeType.Projects;
+
+        return ResumeType.Work;
+    }
+
+    private List<ResumeData> GetData()
+    {
+        if (GetConentType() == ResumeType.Education)
+            return ResumeData.GetEducationExperience();
+
+        if (GetConentType() == ResumeType.Projects)
+            return ResumeData.GetProjectExperience();
+
+        return ResumeData.GetWorkExperience();
+
+    }
+}
+
+

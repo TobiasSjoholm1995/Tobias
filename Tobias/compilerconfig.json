@@ -1,0 +1,22 @@
+﻿[
+  {
+    "inputFile": "wwwroot/css/Common.scss",
+    "outputFile": "wwwroot/css/Common.css"
+  },
+  {
+    "inputFile": "wwwroot/css/FontSize.scss",
+    "outputFile": "wwwroot/css/FontSize.css"
+  },
+  {
+    "inputFile": "wwwroot/css/Menu.scss",
+    "outputFile": "wwwroot/css/Menu.css"
+  },
+  {
+    "inputFile": "wwwroot/css/Resume.scss",
+    "outputFile": "wwwroot/css/Resume.css"
+  },
+  {
+    "inputFile": "wwwroot/css/ViewImage.scss",
+    "outputFile": "wwwroot/css/ViewImage.css"
+  }
+]

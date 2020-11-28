@@ -1,0 +1,46 @@
+﻿@inherits LayoutComponentBase
+
+<div class="main">
+
+    <div class="header">
+        <div>
+            <span class="name disable-select">Tobias Sjöholm</span>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li class="drop-menu">
+                    <a>Resumé</a>
+                    <ul>
+                        <li><a href="Resume/Work">Work</a></li>
+                        <li><a href="Resume/Education">Education</a></li>
+                        <li><a href="Resume/Projects">Projects</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <a href="Skills">Skills</a>
+                </li>
+
+                <li class="drop-menu">
+                    <a>Pictures</a>
+                    <ul>
+                        <li><a href="Picture/All">All</a></li>
+                        <li><a href="Picture/Family">Family</a></li>
+                        <li><a href="Picture/Sport">Sport</a></li>
+                        <li><a href="Picture/Kangaroo">Kangaroo</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <a href="Contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="main-body-div">
+        @Body
+    </div>
+</div>

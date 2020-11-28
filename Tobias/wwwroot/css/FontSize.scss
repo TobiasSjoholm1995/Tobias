@@ -1,0 +1,28 @@
+﻿@import 'Variables.scss';
+
+
+@media (max-width: $small-screen) {
+
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: $small-screen) and (max-width: $medium-screen) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width: $medium-screen) and (max-width: $large-screen) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: $large-screen) {
+    html {
+        font-size: 18px;
+    }
+}
